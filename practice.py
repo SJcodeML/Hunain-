@@ -105,3 +105,109 @@ class Car:
 my_car = Car("Toyota", "Corolla")
 
 del my_car
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+        self.state = "Idle"
+
+    def running(self):
+        self.state = "Running"
+        print(f"{self.name} is now coding. ")
+
+    def walking(self):
+        self.state = "Walking"
+        print(f"{self.name} is now walking. ")
+
+    def sleeping(self):
+        self.state = "Sleeping"
+        print(f"{self.name} is now sleeping. ")
+
+    def show_state(self):
+        print(f"{self.name} is currently in '{self.state}' state. ")
+
+
+person1 = Person("Hunain")
+person1.show_state()
+
+person1 = Person("walking")
+person1.show_state
+
+person1 = Person("sleeping")
+person1.show_state
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Animal sound"
+
+class Dog(Animal):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+    def speak(self):
+        return "WOOF!"
+
+dog = Dog("Tommy")
+print(f"{dog.name} says {dog.speak()}")
+
+
+class Bird:
+    def fly(self):
+        return "Flying high!"
+
+class Fish:
+    def swim(self):
+        return "Swimming deep!"
+
+class FlyingFish(Bird, Fish):
+    pass
+
+fishes_catch = FlyingFish()
+print(fishes_catch.fly())
+print(fishes_catch.swim())
+
+
+def my_function(**student):
+    print("\nHis last name is ")
+
+
+
+
+
+
+
+class Human:
+
+    specie = "Homo sapiens"
+
+    @classmethod
+    def get_specie(cls):
+        return cls.specie
+
+print(Human.get_specie())
+
+
+class Human:
+    @staticmethod
+    def breathe():
+        print("Breathing....")
+
+Human.breathe()
+
+
+class Animal:
+    species = "Unknown"
+
+    @classmethod
+    def make(cls):
+        return cls()
+
+class Dog(Animal):
+    species = "Dog"
+
+animal = Animal.make()
+print(type(animal))
