@@ -17,7 +17,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
+    
 a) Trace the program when the user enters `212`. What is printed?
 b) Why does the program use `float()` on the input instead of `int()`?
 c) What would happen if the `return` statement were replaced with `print(celsius)`?
